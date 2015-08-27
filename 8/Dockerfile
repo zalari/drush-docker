@@ -2,8 +2,8 @@
 FROM zalari/composer
 MAINTAINER Christian Ulbrich <christian.ulbrich@zalari.de>
 
-# Install latest HEAD Drush using Composer
-RUN composer global require drush/drush:dev-master
+# Install Drush 8 using Composer
+RUN composer global require drush/drush:8.*
 
 # Setup the symlink
 RUN ln -sf $COMPOSER_HOME/vendor/bin/drush.php /usr/local/bin/drush
